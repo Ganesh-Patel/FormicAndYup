@@ -44,43 +44,60 @@ Make sure you have the following installed on your system:
     ```bash
     npm run dev
 
+
 ## Tailwind CSS Setup
 
 This project is styled using Tailwind CSS. If Tailwind CSS is not working properly, ensure the following setup in your project:
 
-### Install Tailwind CSS
+### Steps
 
-```bash
-npm install tailwindcss@latest postcss@latest autoprefixer@latest
+1. Install Tailwind CSS and its dependencies:
 
-```bash
-npx tailwindcss init
+    ```bash
+    npm install tailwindcss@latest postcss@latest autoprefixer@latest
+    ```
 
-## Configure tailwind.config.js
+2. Initialize Tailwind CSS:
+
+    ```bash
+    npx tailwindcss init
+    ```
+
+3. Configure `tailwind.config.js`:
+
+    ```js
     /** @type {import('tailwindcss').Config} */
-        export default {
-        content: [
-            './index.html',
-            './src/**/*.{js,ts,jsx,tsx}',
-        ],
-        theme: {
-            extend: {},
-        },
-        plugins: [],
-        };
+    export default {
+      content: [
+        './index.html',
+        './src/**/*.{js,ts,jsx,tsx}',
+      ],
+      theme: {
+        extend: {},
+      },
+      plugins: [],
+    };
+    ```
 
-## Add Tailwind to your index.css
+4. Add Tailwind to your `index.css`:
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+    ```css
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    ```
 
-## Ensure PostCSS is configured in postcss.config.js
+5. Ensure PostCSS is configured in `postcss.config.js`:
 
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
+    ```js
+    module.exports = {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    };
+    ```
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
