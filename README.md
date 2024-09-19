@@ -34,3 +34,12 @@ Make sure you have the following installed on your system:
 
    ```bash
    git clone https://github.com/your-username/formik-yup-tailwind-form.git
+2. Navigate to the project directory:
+    ```bash
+    cd formik-yup-tailwind-form
+3. Install dependencies:
+    ```bash
+    npm install
+4. Run the development server:
+    ```bash
+    npm run dev
