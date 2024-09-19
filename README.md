@@ -43,3 +43,44 @@ Make sure you have the following installed on your system:
 4. Run the development server:
     ```bash
     npm run dev
+
+## Tailwind CSS Setup
+
+This project is styled using Tailwind CSS. If Tailwind CSS is not working properly, ensure the following setup in your project:
+
+### Install Tailwind CSS
+
+```bash
+npm install tailwindcss@latest postcss@latest autoprefixer@latest
+
+```bash
+npx tailwindcss init
+
+## Configure tailwind.config.js
+    /** @type {import('tailwindcss').Config} */
+        export default {
+        content: [
+            './index.html',
+            './src/**/*.{js,ts,jsx,tsx}',
+        ],
+        theme: {
+            extend: {},
+        },
+        plugins: [],
+        };
+
+## Add Tailwind to your index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+## Ensure PostCSS is configured in postcss.config.js
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+
